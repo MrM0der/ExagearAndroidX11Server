@@ -33,7 +33,6 @@ jobs:
       - name: Build APK
         working-directory: ./workspace
         run: |
-          if [ ! -f "gradlew" ]; then gradle wrapper; fi
           chmod +x gradlew
           gradle ${{ github.event.inputs.taskName }} --stacktrace
 
