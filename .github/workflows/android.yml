@@ -33,7 +33,6 @@ jobs:
       - name: Build APK
         working-directory: ./workspace
         run: |
-          chmod +x gradlew
           gradle ${{ github.event.inputs.taskName }} --stacktrace
 
       - name: Upload the APK artifact with 1 day retention
